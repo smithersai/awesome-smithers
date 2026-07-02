@@ -21,7 +21,6 @@ Last researched: 2026-07-02.
 
 - [Smithers](https://github.com/smithersai/smithers) - The core open-source Smithers repo: engine, scheduler, CLI, gateway, workflow pack, components, docs, examples, and e2e tests.
 - [Smithers docs](https://smithers.sh) - Product docs, component reference, guides, examples, integration docs, and workflow catalog.
-- [smithers-orchestrator on npm](https://www.npmjs.com/package/smithers-orchestrator) - The published runtime package used by most standalone workflows.
 
 ## Apps and Control Planes
 
