@@ -37,11 +37,22 @@ In the PR description, include the public evidence you used to verify the entry.
 
 If the project is only name-adjacent or agent-orchestration-adjacent, leave it out until there is public evidence that it uses Smithers.
 
+## Research Tips
+
+Useful searches include `smithers-orchestrator`, `github:evmts/smithers`, `createSmithers`, `@jsxImportSource smithers-orchestrator`, `.smithers/workflows`, and `"Smithers" "workflow"`.
+
+Treat GitHub organization membership, repository names, and `.smithers` directories as leads, not proof. Read the linked README, package manifest, workflow source, or docs page before adding an entry. If the Smithers evidence is only in a subdirectory or file, link directly to that path.
+
+Authenticated GitHub search can include private repositories visible to your account. Do not add private results, internal paths, or repositories that only mention Smithers in logs, transcripts, generated security feeds, or dependency scanners.
+
+Archived projects can be useful historical examples, but label them as archived in the description so readers do not mistake them for active tools.
+
 ## Review Checklist
 
 Before opening a PR:
 
 - Check the link works.
+- Confirm the repo is public.
 - Confirm the repo or docs mention Smithers, `smithers-orchestrator`, or a public `.smithers` workflow.
 - Include the verification link or path in the PR description.
 - Keep descriptions factual and concise.
