@@ -31,12 +31,19 @@ Use this format:
 
 Put the entry in the most specific section. If a project has Smithers workflows but Smithers is not the main product, use **Embedded Workflows**.
 
+## Evidence
+
+In the PR description, include the public evidence you used to verify the entry. Good evidence includes a README section, docs page, `package.json` dependency, `.smithers/workflows` path, workflow source file, or Smithers Workflow Directory listing.
+
+If the project is only name-adjacent or agent-orchestration-adjacent, leave it out until there is public evidence that it uses Smithers.
+
 ## Review Checklist
 
 Before opening a PR:
 
 - Check the link works.
 - Confirm the repo or docs mention Smithers, `smithers-orchestrator`, or a public `.smithers` workflow.
+- Include the verification link or path in the PR description.
 - Keep descriptions factual and concise.
 - Avoid hype words unless they are part of the project's own name.
 - Keep entries alphabetized within each section when practical.
