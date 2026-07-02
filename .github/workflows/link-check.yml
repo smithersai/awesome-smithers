@@ -1,4 +1,4 @@
-name: Link Check
+name: Checks
 
 on:
   pull_request:
@@ -9,12 +9,16 @@ on:
     - cron: "0 14 * * 1"
 
 jobs:
-  links:
+  checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: lycheeverse/lychee-action@v2
+      - uses: actions/setup-node@v4
         with:
-          args: --verbose --no-progress README.md CONTRIBUTING.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 22
+      - name: Lint Awesome list
+        run: npx -y awesome-lint README.md
+      - name: Check README links
+        run: npx -y markdown-link-check README.md
+      - name: Check contributing links
+        run: npx -y markdown-link-check CONTRIBUTING.md
