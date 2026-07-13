@@ -40,6 +40,7 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 - [paperclip-smithers](https://github.com/smithersai/smithers-paperclip) - Paperclip-style agent work management app built with Smithers Gateway and workflows for routines, approvals, budgets, imports, exports, and plugin jobs.
 - [Smithers Workflow Directory](https://www.smithers.directory/) - Community directory for discovering and installing Smithers workflow packs, with published manifests for repositories such as Ralf workflows and Go review workflows.
 - [smithers-directory CLI](https://npmx.dev/package/smithers-directory) - Published CLI for adding Smithers Directory workflow packs by `owner/repo`, with a short `smithers-dir` alias package.
+- [smithers-progress](https://github.com/aviggiano/smithers-progress) - Read-only Codex plugin that visualizes local Smithers workflow runs in a right-side panel: directory picker, run selector, progress summary, workflow graph, and node details.
 - [Smithers TUI](https://github.com/smithersai/tui) - Go terminal interface with seeded Smithers workflows and MCP status handling for Smithers-connected agent sessions.
 - [SmithersGUI](https://github.com/smithersai/gui) - Native macOS app for managing Smithers workflows, agent sessions, terminals, and tickets, with public `.smithers` workflows for ticketing, review, and launch flows.
 - [svvy](https://github.com/0xpolarzero/svvy) - Strategic coding workbench that routes bounded implementation threads through official Smithers CLI workflow work and durable result handoff.
