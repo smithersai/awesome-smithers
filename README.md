@@ -63,6 +63,7 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 
 ## Domain Projects
 
+- [Aomi Smither](https://github.com/aomi-labs/aomi/tree/main/packages/smither) - On-chain agentic AI harness whose `aomi-smither` CLI/TUI composes a durable Smithers workflow on the fly from natural-language intent: a Zod-typed `BuildPlan` renders into a JSX task graph with deterministic Rust codegen, Claude/Codex curation/review/fix agents (including cross-repo agents), validate/repair loops, select-mode clarify approvals, LLM-judged eval loops, parallel branches, durable `Signal` waits, and an approval-gated deploy. Ships a custom Gateway console UI with TUI/browser-shared durable decisions, runs on bun:sqlite, PGlite, or PostgreSQL backends, and is documented end-to-end by a real-session PoC log covering durability resume, agent rejection/repair, and live deploy.
 - [AttestMesh](https://github.com/AttestMesh/AttestMesh) - On-chain coordination layer whose deployment workflow uses Smithers to bring up contracts, a webhook, an indexer, nodes, and mesh verification.
 - [Cairo Coder](https://github.com/KasarLabs/cairo-coder) - AI-powered Cairo smart contract generator and RAG service; listed in the Smithers ecosystem docs as using Smithers with Claude and Codex agents.
 - [Chop](https://github.com/evmts/chop) - EVM SDK workspace with a `scripts/chop-workflow` Smithers package for agent-driven codebase review, validation, planning, and ticket-loop work.
