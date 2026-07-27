@@ -4,7 +4,7 @@ A curated list of projects, workflow packs, examples, and integrations built wit
 
 Smithers workflows are usually TypeScript or TSX files that compose tasks, agents, approval gates, loops, branches, durable checkpoints, and structured outputs. This list focuses on public projects that use those primitives in useful or interesting ways.
 
-Last researched: 2026-07-02.
+Last researched: 2026-07-27.
 
 Entries favor direct Smithers usage with public evidence: a README, docs page, package dependency, published workflow pack, or visible `.smithers` workflow source. Smithers-adjacent projects are included only when that relationship is clear from public source.
 
@@ -36,7 +36,6 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 - [Codeplane Community Edition](https://github.com/smithersai/community) - Archived self-hosted agentic software development service; its `AGENTS.md` describes a "SuperSmithers" product lifecycle running inside Smithers, with `specs/generate.tsx` as a ticket-based Smithers workflow. Historical/read-only.
 - [CustomHarness](https://github.com/benvenker/custom-harness) - Local visual workbench for Smithers workflow-pack source and run state, with graph previews, source-backed metadata editing, run starts, and SQLite run inspection.
 - [JJHub](https://github.com/smithersai/jjhub) - Jujutsu-native software forge with a workflow package that wraps Smithers primitives for triggers, tasks, artifacts, caches, and schema-driven workflow authoring.
-- [Panopticon](https://github.com/RonTuretzky/vibecode-room) - Spatial AI-agent workspace with a Smithers-backed meta-session, suggestion engine, process manager, and public `.smithers` workflows for agent process experiments.
 - [paperclip-smithers](https://github.com/smithersai/smithers-paperclip) - Paperclip-style agent work management app built with Smithers Gateway and workflows for routines, approvals, budgets, imports, exports, and plugin jobs.
 - [Smithers Workflow Directory](https://www.smithers.directory/) - Community directory for discovering and installing Smithers workflow packs, with published manifests for repositories such as Ralf workflows and Go review workflows.
 - [smithers-directory CLI](https://npmx.dev/package/smithers-directory) - Published CLI for adding Smithers Directory workflow packs by `owner/repo`, with a short `smithers-dir` alias package.
@@ -45,6 +44,7 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 - [SmithersGUI](https://github.com/smithersai/gui) - Native macOS app for managing Smithers workflows, agent sessions, terminals, and tickets, with public `.smithers` workflows for ticketing, review, and launch flows.
 - [svvy](https://github.com/0xpolarzero/svvy) - Strategic coding workbench that routes bounded implementation threads through official Smithers CLI workflow work and durable result handoff.
 - [takopi-smithers](https://github.com/smithersai/takopi-smithers) - Telegram bridge and supervisor for long-lived Smithers workflows, including status updates, restart handling, diagnostics, and auto-heal support.
+- [Vibersyn (formerly Panopticon)](https://github.com/RonTuretzky/vibecode-room) - Voice- and gesture-driven ambient idea room where spoken ideas are judged live by a Smithers-scored detector and each accepted idea spawns a durable, steerable Smithers run that builds it into a running app in front of the room, including a self-hosting mode where the room edits its own source behind a Smithers-gated commit.
 
 ## Workflow Engines and Packs
 
@@ -53,20 +53,22 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 - [gsmithers](https://github.com/smithersai/gsmithers) - Port of gstack-style AI engineering workflows to typed Smithers TSX workflows with explicit nodes, Zod outputs, checkpoints, and event logs.
 - [Local Isolated Ralph / Fabrik](https://github.com/SamuelLHuber/local-isolated-ralph) - Kubernetes-native Smithers workflow runner that targets local and CI execution through k3s Jobs and CronJobs.
 - [Ralf Smithers Workflows](https://github.com/ralfboltshauser/ralf-workflows) - Directory-publishable workflow pack with bug regression audits, Lighthouse checks, cyber security audits, and Smithers image-generation workflows.
-- [Ralphinho](https://github.com/enitrat/ralphinho) - Multi-agent development workflows for spec-driven implementation and review discovery, with optional Linear handoff.
+- [Ralphinho](https://github.com/enitrat/ralphinho) - Multi-agent development workflows for spec-driven implementation and review discovery, with optional Linear handoff; a fork of Super Ralph below, so the two entries share one lineage rather than representing independent adoptions.
 - [smithers-fusions](https://github.com/smithersai/smithers-fusions) - CLI and TypeScript library for model-panel fusions and durable Smithers plan, implement, review, and fix loops with approval gates.
 - [smithers-go-review](https://github.com/SamuelLHuber/smithers-go-review) - Installable Smithers workflow for strict Go code review against Go Code Review Comments and Effective Go, returning structured issue reports.
 - [smithers-go-review-fix](https://github.com/SamuelLHuber/smithers-go-review-fix) - Go review workflow with a surgical fix loop that addresses one issue per iteration and validates with `go test` and `go vet`.
 - [smithers-workflows](https://github.com/Eikix/smithers-workflows) - Repeatable workflow library for implementation, validation, review, GitHub Actions babysitting, and PR babysitting.
 - [Super Ralph](https://github.com/roninjin10/super-ralph) - Reusable ticket-driven development workflow with multi-agent review loops, jj-native worktrees, progress reporting, and speculative merge queue semantics.
+- [xiv](https://github.com/jacobdcastro/workflows) - Agent-operated CLI wrapping a managed Smithers pack that takes Linear issues to reviewed PRs: implement/validate/review loops, PR-review-round polling, and overnight jj-stacked feature builds, with mixed Claude/Codex cost tiers and a custom Gateway console.
 - [ZetisLabs smithers-workflows](https://github.com/ZetisLabs/smithers-workflows) - Centralized workflow pack for GitHub issue dispatch and PR review, with reusable frontend, backend, testing, review, and security agents.
 
 ## Domain Projects
 
 - [Aomi Smither](https://github.com/aomi-labs/aomi/tree/main/packages/smither) - On-chain agentic AI harness whose `aomi-smither` CLI/TUI composes a durable Smithers workflow on the fly from natural-language intent: a Zod-typed `BuildPlan` renders into a JSX task graph with deterministic Rust codegen, Claude/Codex curation/review/fix agents (including cross-repo agents), validate/repair loops, select-mode clarify approvals, LLM-judged eval loops, parallel branches, durable `Signal` waits, and an approval-gated deploy. Ships a custom Gateway console UI with TUI/browser-shared durable decisions, runs on bun:sqlite, PGlite, or PostgreSQL backends, and is documented end-to-end by a real-session PoC log covering durability resume, agent rejection/repair, and live deploy.
-- [AttestMesh](https://github.com/AttestMesh/AttestMesh) - On-chain coordination layer whose deployment workflow uses Smithers to bring up contracts, a webhook, an indexer, nodes, and mesh verification.
+- [AttestMesh](https://github.com/AttestMesh/AttestMesh) - On-chain coordination layer for meshes of mutually-attested dstack (TEE) nodes; uses Smithers for durable, resumable deploy sequencing (contracts, webhook, indexer, Matrix/Postgres-HA/R2-gateway nodes, mesh verification) and, separately, as the delegation boundary for a fail-closed pre-commit security gate: a `Parallel` panel of ephemeral read-only Codex specialists plus a Zod-typed arbiter `Task` that blocks commits containing secrets, backups, or prompt injection.
 - [Cairo Coder](https://github.com/KasarLabs/cairo-coder) - AI-powered Cairo smart contract generator and RAG service; listed in the Smithers ecosystem docs as using Smithers with Claude and Codex agents.
 - [Chop](https://github.com/evmts/chop) - EVM SDK workspace with a `scripts/chop-workflow` Smithers package for agent-driven codebase review, validation, planning, and ticket-loop work.
+- [Distilled (Hourglass Financial)](https://github.com/hourglass-financial/distilled) - Effect-native multi-cloud SDK generator, a fork of `alchemy-run/distilled`, whose Smithers pipeline drives spec update, patch reconcile, regenerate, and test triage for each vendor SDK, escalating to scoped Codex tasks only when a deterministic classifier cannot resolve the drift.
 - [Guillotine Mini](https://github.com/evmts/guillotine-mini) - Tiny Zig EVM with Smithers build and fix-spec workflows, Claude/Codex agent adapters, phase docs, and a Smithers submodule-backed pipeline.
 - [MealPrepClaw nutrition-agent](https://github.com/roninjin10/MealPrepClaw/tree/main/nutrition-agent) - Durable meal planning and grocery workflow with Smithers TSX workflows, approval gates, MCP sidecars for health data, Instacart, and food vision.
 - [VibeAudit](https://github.com/aviggiano/vibeaudit) - AI-assisted security review orchestrator that runs audit strategies in parallel, deduplicates findings, triages them, and emits a final report.
@@ -100,15 +102,16 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 
 These projects are not primarily Smithers products, but have public Smithers workflows or workflow experiments worth studying.
 
-- [Agent CAPTCHA](https://github.com/ClementWalter/agent-captcha) - Agent-only posting protocol with cryptographic receipts; includes public `.smithers` workflow files for development and validation flows.
-- [agent-session-search](https://github.com/benvenker/agent-session-search) - Local MCP server and CLI for searching coding-agent session history, with Smithers workflows for planning, backpressure, grill-me, and review-loop experiments.
+- [Agent CAPTCHA](https://github.com/ClementWalter/agent-captcha) - Agent-only posting protocol with cryptographic receipts; its public `.smithers` includes an unattended vulnerability-hunt-and-harden Ralph loop (sandboxed finder, live-prod canary, bounded AI repair with hard revert, auto-redeploy) that shipped real security fixes to the project's own deployment.
+- [agent-session-search](https://github.com/benvenker/agent-session-search) - Local MCP server and CLI for searching coding-agent session history, with a 39-workflow Smithers dev-ops pack covering planning, implementation, review, tickets, evals, and a watchdog that monitors its own Smithers runs.
 - [claude-p](https://github.com/smithersai/claude-p) - Educational drop-in replacement for `claude -p` that drives Claude Code through an in-process zmux PTY session; the README states it was built using the Smithers self-improving harness.
-- [DAML Tools](https://github.com/stevennevins/daml-tools) - DAML tooling workspace with Smithers prompt scaffolding for generating runnable workflow files from approved workflow designs.
+- [DAML Tools](https://github.com/stevennevins/daml-tools) - Rust/Daml tooling workspace running the full Smithers seeded pack (34 workflows) plus four custom Rust-crate-quality workflows, including a `monitor-smithers` watchdog over its own run fleet and a five-engine agent pool (Claude Code, Codex, Cursor, OpenCode, Antigravity).
 - [distillery](https://github.com/TinyCloudLabs/artifactory) - Transcript-to-artifact system with Smithers workflows for staged rich-media smoke tests, agent runs, feed orchestration, and report generation.
 - [incur-go](https://github.com/smithersai/incur-go) - Go framework for agent-friendly CLIs with a public `.smithers` workflow pack for implementation, review, test-first, ticket, and PR-description loops.
 - [labor.fun expense workflow](https://github.com/BreadchainCoop/labor.fun/blob/main/orchestration/workflows/expense.tsx) - Example of Smithers as a long-lived, human-in-the-loop state machine for expense approval and reimbursement.
+- [my-mac-setup](https://github.com/Seigiard/my-mac-setup) - Cross-platform chezmoi dotfiles whose `.smithers` package runs a durable verify-doc, work, verify-code pipeline with dual Claude/OpenCode review legs, provenance-bound (`ctx.prove`/`bind`) gates, post-approval re-scan, and a custom `se` CLI.
 - [pdf-to-md Smithers build workflow](https://github.com/ClementWalter/pdf-to-md/tree/main/scripts/smithers-build) - PDF-to-Markdown service built with a dedicated Smithers loop for implementation, tests, review, final review, pass tracking, and persistent workflow state.
-- [prettymux](https://github.com/patcito/prettymux) - Terminal multiplexer project with public Smithers validation-loop components for implement, validate, and review cycles.
+- [prettymux](https://github.com/patcito/prettymux) - Native Linux terminal multiplexer (GTK4/libghostty) whose maintainer runs the entire dev loop through Smithers: a reusable implement/validate/review `ValidationLoop`, `Worktree`-based parallel ticket fan-out with agent merge, and Memory-backed incremental feature enumeration across 16 workflows and 4 pooled agents (Claude/Codex/Gemini/Pi).
 - [Smithers Terminal fork workflow](https://github.com/roninjin10/smithers-terminal/blob/main/.smithers/main.tsx) - Ghostty fork experiment driven by a Smithers workflow that coordinates phased implementation and review of terminal-agent functionality.
 - [smithers-tests](https://github.com/evmts/smithers-tests) - Compact Voltaire release-testing workflow that uses Smithers phases and parallel agents to fan out test work across Git worktrees.
 - [Tevm](https://github.com/evmts/tevm-monorepo) - JavaScript-native Ethereum runtime with seeded `.smithers` workflows for implementation, research, review, tickets, and validation loops inside a large production monorepo.
@@ -124,6 +127,8 @@ This first cut was assembled from:
 - MCP and agent marketplace search, including Glama and MCP Market.
 - Web and social search for public Smithers workflow mentions outside GitHub.
 - Authenticated GitHub repo and code search for `smithers-orchestrator`, `github:evmts/smithers`, `createSmithers`, `@jsxImportSource smithers-orchestrator`, `.smithers/workflows`, and public Smithers workflow references.
+
+The 2026-07-27 sweep merged four discovery channels (this list, GitHub repo and code search, the npm registry, and web/social search) into a single registry of 76 projects, then cloned and read 30 external projects line by line to verify each listing against current source rather than against its README.
 
 Good candidates should be public, directly use Smithers, and have enough readable context that a newcomer can understand why the project is useful. Authenticated GitHub search can surface private repositories and name-adjacent projects; those should be filtered out unless the public repo itself shows clear Smithers evidence. The 2026-07-02 sweep confirmed saturation: authenticated `gh search code` for `smithers-orchestrator` and `@jsxImportSource smithers-orchestrator` surfaced only already-listed public repos plus three private ones (`evmts/mvp`, `roninjin10/dawn`, `smithersai/plue`) that were excluded for lacking public evidence.
 
