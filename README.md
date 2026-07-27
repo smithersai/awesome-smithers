@@ -31,7 +31,6 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 
 ## Apps and Control Planes
 
-- [Acoco](https://acoco.ai) - Autonomous Company Company platform for owning self-running businesses in the broader Smithers ecosystem.
 - [Burns](https://github.com/l3wi/burns) - Workspace-first local control plane for authoring, running, and supervising Smithers workflows across real repositories. A strong example of how to document a Smithers-adjacent app: it clearly separates Smithers runtime responsibilities from the surrounding workspace, daemon, UI, desktop shell, and CLI.
 - [Codeplane Community Edition](https://github.com/smithersai/community) - Archived self-hosted agentic software development service; its `AGENTS.md` describes a "SuperSmithers" product lifecycle running inside Smithers, with `specs/generate.tsx` as a ticket-based Smithers workflow. Historical/read-only.
 - [CustomHarness](https://github.com/benvenker/custom-harness) - Local visual workbench for Smithers workflow-pack source and run state, with graph previews, source-backed metadata editing, run starts, and SQLite run inspection.
@@ -42,7 +41,7 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 - [smithers-progress](https://github.com/aviggiano/smithers-progress) - Read-only Codex plugin that visualizes local Smithers workflow runs in a right-side panel: directory picker, run selector, progress summary, workflow graph, and node details.
 - [Smithers TUI](https://github.com/smithersai/tui) - Go terminal interface with seeded Smithers workflows and MCP status handling for Smithers-connected agent sessions.
 - [SmithersGUI](https://github.com/smithersai/gui) - Native macOS app for managing Smithers workflows, agent sessions, terminals, and tickets, with public `.smithers` workflows for ticketing, review, and launch flows.
-- [svvy](https://github.com/0xpolarzero/svvy) - Strategic coding workbench that routes bounded implementation threads through official Smithers CLI workflow work and durable result handoff.
+- [svvy](https://github.com/0xpolarzero/svvy) - Electrobun desktop coding workbench with two independent Smithers usages: a repo-native `workflows/` authoring pack (pinned `smithers-orchestrator`, `Worktree`-isolated implement/test/review loops fanned out in `Parallel` across Codex, Gemini CLI, and Pi agents) that builds svvy itself, and a shipped builtin extension that teaches the app's own agents to drive the official Smithers CLI directly rather than hiding it behind a product wrapper, backed by a runtime task-agent bridge that exposes svvy's coding agent as an `AgentLike` for `<Task agent={...}>`.
 - [takopi-smithers](https://github.com/smithersai/takopi-smithers) - Telegram bridge and supervisor for long-lived Smithers workflows, including status updates, restart handling, diagnostics, and auto-heal support.
 - [Vibersyn (formerly Panopticon)](https://github.com/RonTuretzky/vibecode-room) - Voice- and gesture-driven ambient idea room where spoken ideas are judged live by a Smithers-scored detector and each accepted idea spawns a durable, steerable Smithers run that builds it into a running app in front of the room, including a self-hosting mode where the room edits its own source behind a Smithers-gated commit. The integration began as a collaboration with Smithers author Will Cory, who built its original Smithers foundation.
 
@@ -94,7 +93,7 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 ## Integrations and Benchmarks
 
 - [elizaOS Smithers benchmark adapter](https://github.com/elizaOS/eliza/tree/main/packages/benchmarks/smithers-adapter) - Benchmark adapter that lets elizaOS benchmark harnesses run against Smithers as an agent harness.
-- [Hermes and Eliza Smithers integration](https://smithers.sh/integrations/hermes) - First-class Smithers integration for the Hermes agent and elizaOS, making Smithers the durable control plane for launch, approval, and run-status flows.
+- [Hermes and Eliza Smithers integration](https://smithers.sh/integrations/hermes) - First-party integration shipped by Smithers rather than third-party adoption: `smithers hermes` installs a Smithers-authored plugin, gateway hook, and MCP server into a local Hermes install (slash commands, status injection, approval buttons), and a `HermesCliAgent` lets a Smithers `Task` drive Hermes back. The plugin source lives in the Smithers repo; `NousResearch/hermes-agent` itself carries no Smithers code, so treat this as a supported agent runtime, not an adopter project.
 
 ## Embedded Workflows
 
