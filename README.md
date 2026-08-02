@@ -26,7 +26,7 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 - [Smithers examples folder](https://github.com/smithersai/smithers/tree/main/examples) - 100+ runnable reference workflows in the core repo covering loops, fan-out/fan-in, approvals, gates, evals, ETL, review cycles, retries, and domain automations.
 - [smithers.sh/llms-full.txt](https://smithers.sh/llms-full.txt) - Full documentation bundle in a single file for feeding Smithers docs to LLMs and coding agents.
 - [smithers.sh/mcp](https://smithers.sh/mcp) - Smithers MCP integration docs for connecting agents to the Smithers control plane over the Model Context Protocol.
-- [smithers-orchestrator npm package](https://npmx.dev/package/smithers-orchestrator) - Published Smithers package and CLI facade for durable coding-agent workflows, Gateway operation, and generated workflow packs.
+- [smthrs npm package](https://npmx.dev/package/smthrs) - Published Smithers package and CLI facade for durable coding-agent workflows, Gateway operation, and generated workflow packs.
 - [incur](https://github.com/wevm/incur) - CLI framework for agents and humans that the Smithers CLI is built on (a direct `incur` dependency of the core repo); a great foundation for building agent-friendly command-line tools.
 
 ## Apps and Control Planes
@@ -85,7 +85,7 @@ Entries favor direct Smithers usage with public evidence: a README, docs page, p
 - [smithers-practice](https://github.com/amiller/smithers-practice) - Reusable Smithers starter kit with research and build-loop workflow templates, a custom monitoring dashboard, and workflow pattern notes.
 - [smithers-samples](https://github.com/dennisonbertram/smithers-samples) - Runnable, live-verified sample workflows covering fundamentals, durable resume, human approval, memory, retries, scorers, evals, routing, review, ETL, and fix-until-green loops.
 - [Smithers on Vercel Example](https://github.com/smithersai/vercel-example) - Serverless Telegram summary bot example with Vercel Functions, PostgreSQL, Cron, CI gates, and the `.smithers` workflows that built and typecheck the app.
-- [smithers-test-workflow](https://github.com/SamuelLHuber/smithers-test-workflow) - Minimal Smithers smoke-test repo with a public `.smithers/workflows/test-echo.tsx` using `@jsxImportSource smithers-orchestrator`, `createSmithers`, and a direct `smithers-orchestrator` dependency.
+- [smithers-test-workflow](https://github.com/SamuelLHuber/smithers-test-workflow) - Minimal Smithers smoke-test repo with a public `.smithers/workflows/test-echo.tsx` using `@jsxImportSource smthrs`, `createSmithers`, and a direct `smthrs` dependency.
 - [smithers-toy](https://github.com/amiller/smithers-toy) - Toy Smithers experiments, including interactive demos and exploratory workflows.
 - [Voltaire Effect Example](https://github.com/evmts/voltaire-effect-example) - Compact example repository showing an older Ralph-style Smithers workflow with phases, agent components, SQLite state, and `.smithers` execution logs.
 
@@ -123,9 +123,9 @@ This first cut was assembled from:
 - NPM registry search for Smithers packages and package-discovery surfaces.
 - MCP and agent marketplace search, including Glama and MCP Market.
 - Web and social search for public Smithers workflow mentions outside GitHub.
-- Authenticated GitHub repo and code search for `smithers-orchestrator`, `github:evmts/smithers`, `createSmithers`, `@jsxImportSource smithers-orchestrator`, `.smithers/workflows`, and public Smithers workflow references.
+- Authenticated GitHub repo and code search for `smthrs`, `github:evmts/smithers`, `createSmithers`, `@jsxImportSource smthrs`, `.smithers/workflows`, and public Smithers workflow references.
 
-Good candidates should be public, directly use Smithers, and have enough readable context that a newcomer can understand why the project is useful. Authenticated GitHub search can surface private repositories and name-adjacent projects; those should be filtered out unless the public repo itself shows clear Smithers evidence. The 2026-07-02 sweep confirmed saturation: authenticated `gh search code` for `smithers-orchestrator` and `@jsxImportSource smithers-orchestrator` surfaced only already-listed public repos plus three private ones (`evmts/mvp`, `roninjin10/dawn`, `smithersai/plue`) that were excluded for lacking public evidence.
+Good candidates should be public, directly use Smithers, and have enough readable context that a newcomer can understand why the project is useful. Authenticated GitHub search can surface private repositories and name-adjacent projects; those should be filtered out unless the public repo itself shows clear Smithers evidence. The 2026-07-02 sweep confirmed saturation: authenticated `gh search code` for `smthrs` and `@jsxImportSource smthrs` surfaced only already-listed public repos plus three private ones (`evmts/mvp`, `roninjin10/dawn`, `smithersai/plue`) that were excluded for lacking public evidence.
 
 ## Contributing
 
